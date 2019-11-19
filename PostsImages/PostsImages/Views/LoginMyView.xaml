@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PostsImages.ViewModels"
+    xmlns:behavior="clr-namespace:PostsImages.ViewModels.Behaviors"
+    x:Class="PostsImages.Views.LoginMyView">
+
+    <Grid RowSpacing="0" ColumnSpacing="0" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+
+        
+        <Image Source="avatar.png" Grid.Column="4" Grid.Row="1" />
+        <Label Text="Login" Grid.Column="4" Grid.Row="2" FontSize="35" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Label x:Name="MesssageError" Text="Nhập UserName ít nhất 8 kí tự và Password ít nhất 8 kí tự phải có số, chữ và kí tự đặc biệt."
+               Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="5" Grid.RowSpan="2"
+               FontSize="15" TextColor="Red" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Image Source="user.png" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Opacity="0.5"/>
+        <Entry Text="{Binding UserName}"
+               TextChanged="Usernamechanged"
+               x:Name="UserName"
+               Placeholder="Username"
+               HorizontalOptions="FillAndExpand"
+               Grid.Column="4" Grid.Row="5" FontSize="25"
+               VerticalOptions="Center"
+               Grid.ColumnSpan="4">
+                    <Entry.Behaviors>
+                        <behavior:TextChangedBehavior/>
+                    </Entry.Behaviors>
+            </Entry>
+        <!--Text="{Binding UserName}"-->
+        <Image Source="pass.png" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2" Opacity="0.5"/>
+        <Entry Text="{Binding Password}"
+               x:Name="Password"
+               TextChanged="Passwordchanged"
+               Placeholder="Password"
+               HorizontalOptions="FillAndExpand"
+               Grid.Column="4" Grid.Row="7" FontSize="25"
+               VerticalOptions="Center"
+               Grid.ColumnSpan="4"
+               IsPassword="True"/>
+          <!--Text="{Binding Password}"-->
+
+        <Button x:Name="Loginbtn" Text="Đăng nhập" Command="{Binding OnLogin}"
+                Grid.Column="3" Grid.Row="9" Grid.ColumnSpan="3" Style="{StaticResource ButtonStyle}"
+                Opacity="1" IsVisible="false"/>
+            <!--ImageSource="loginbtn01.png"-->
+                
+        
+        
+
+        <Label Text="Hoặc đăng nhập bằng:" Grid.Column="3" Grid.Row="11" Grid.ColumnSpan="3"
+               VerticalOptions="End" HorizontalOptions="Center" />
+
+
+        <StackLayout Grid.Column="2" Grid.Row="13" Grid.ColumnSpan="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                 <Button  Text="Facebook" FontSize="Small"
+                         Style="{StaticResource ButtonFacebookStyle}"
+                                    Command="{Binding LoginFacebook}"
+                                    Grid.Column="0"
+                                    VerticalOptions="End" HorizontalOptions="End"/>
+                 <Button  Text="Google"
+                         Command="{Binding LoginGoogle}"
+                         Style="{StaticResource ButtonGoogleStyle}"
+                                    Grid.Column="1" 
+                                    VerticalOptions="End" HorizontalOptions="End"/>
+            </Grid>
+           
+        </StackLayout>
+  
+    </Grid>  
+</ContentPage>
+
+
+
+ <!--<FlexLayout Grid.Column="3" Grid.Row="11" Grid.ColumnSpan="3" Grid.RowSpan="3">
+                    <StackLayout>
+                        <FlexLayout Padding="5">
+                            <Button ImageSource="iconFB1.png" Command="{Binding LoginFacebook}"/>
+                            <Button ImageSource="icongl1.png" Command="{Binding LoginGoogle}"/>
+                            <Image Source="icongl1.png">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                            
+                                            NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Source="icontw1.png">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                            
+                                            NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Source="iconFB1.png">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        Command="{Binding LoginFacebook}"
+                                        NumberOfTapsRequired="1" />
+                                </Image.GestureRecognizers>
+                            </Image>
+                            
+                        </FlexLayout>
+                    </StackLayout>
+            </FlexLayout>-->
+  

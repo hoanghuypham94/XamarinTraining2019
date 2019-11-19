@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PostsImages.Views.CustomMasterDetailPage"
+    xmlns:local="clr-namespace:PostsImages.Services"
+    xmlns:lc="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+    xmlns:lb="clr-namespace:XLabs.Forms.Behaviors;assembly=XLabs.Forms"
+    xmlns:effect="clr-namespace:PostsImages.Effects;assembly=PostsImages"
+    xmlns:controls="clr-namespace:PostsImages.Controls"
+    Padding="20">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout BackgroundColor="Silver" Padding="5">
+                <Grid
+                    BackgroundColor="Gray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="Auto" />
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="10" />
+                        <RowDefinition
+                            Height="Auto" />
+                    </Grid.RowDefinitions>
+
+
+                     <Frame Margin="10"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            BorderColor="White"
+                            CornerRadius="50"
+                            HeightRequest="60"
+                            WidthRequest="60"
+                            IsClippedToBounds="True"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                         <Image Source="avatar.png"
+                                HeightRequest="100"    
+                                WidthRequest="100" 
+                                Aspect="AspectFill"
+                                Margin="-20"
+                                VerticalOptions="Center"/>
+                     </Frame>
+                    <Label Text="{Binding UserName}"
+                           Grid.Column="1"
+                           Grid.ColumnSpan="5"
+                           Grid.Row="1" FontSize="30"
+                           TextColor="White"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"/>
+        
+                   
+                </Grid>
+                    <!--<Button Text="Trang chủ"
+                            TextColor="White"
+                            BackgroundColor="Gray"
+                            Command="{Binding MainPageCommand}"
+                            CommandParameter="NavigationPage/MainPageView"/>-->
+                    <Button Text="Thông tin cá nhân"
+                            Style="{StaticResource ButtonMenuStyle}"
+                            Command="{Binding InfoUserCommand}"
+                            CommandParameter="NavigationPage/InfoOfUserMyView"/>
+                            <!--<local:BorderEntry />-->
+                                    
+                        
+                    <Button Text="Duyệt hình ảnh"
+                            Style="{StaticResource ButtonMenuStyle}"
+                            Command="{Binding ShowImageCommand}"
+                            CommandParameter="NavigationPage/ShowImagesPageMyView"/>
+                    <!--<Button Text="Đăng xuất"  Command="{Binding LoguotCommand}"
+                            FontSize="25" VerticalOptions="End" HorizontalOptions="End"/>-->
+
+
+                    <controls:ButtonMenuRenderer
+                        Text="Đăng xuất"
+                        x:Name="SettingsButton"
+                        Image="ic_settings"
+                        TextColor="White"
+                        BackgroundColor="#327fc0"
+                        HeightRequest="40"
+                        WidthRequest="130"
+                        BorderRadius="13"
+                        Padding="2"
+                        effect:ButtonLongPressedEffect.Command="{Binding LoguotCommand}">
+                        <controls:ButtonMenuRenderer.Effects>
+                            <effect:ButtonLongPressedEffect/>
+                        </controls:ButtonMenuRenderer.Effects>
+                    </controls:ButtonMenuRenderer>
+
+               
+                    <!--<lc:GesturesContentView ExcludeChildren="False" GestureRecognized="GesturesContentView_GestureRecognized">
+                         <lb:Gestures.Interests>
+                                <lb:GestureCollection>
+                                    <lb:GestureInterest GestureType="SingleTap"/>
+                                    <lb:GestureInterest GestureType="LongPress"/>
+                                    <lb:GestureInterest GestureType="DoubleTap"/>
+                            </lb:GestureCollection>
+                        </lb:Gestures.Interests>
+                      <controls:ButtonMenuRenderer
+                        Text="Đăng xuất"
+                        x:Name="SettingsButton"
+                        Image="ic_settings"
+                        TextColor="White"
+                        BackgroundColor="#327fc0"
+                        HeightRequest="40"
+                        WidthRequest="100"
+                        BorderRadius="13"
+                        Padding="2"
+                        Command="{Binding LoguotCommand}"/>
+                    </lc:GesturesContentView>-->
+                </StackLayout>
+            </ContentPage>
+    </MasterDetailPage.Master>
+
+
+</MasterDetailPage>

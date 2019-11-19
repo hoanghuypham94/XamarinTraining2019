@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PostsImages.Views.ShowImagesPageMyView"
+    xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             mvvm:ViewModelLocator.AutowireViewModel="True">
+
+      <Grid>
+          <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>
+              <RowDefinition Height="*"/>
+          </Grid.RowDefinitions>
+            
+            <CollectionView x:Name="collectionListview"
+                            ItemsSource="{Binding collectionList}"
+                            SelectionMode="Single"
+                            SelectedItems="{Binding CollectionviewCommand, Mode=TwoWay}"
+                            BackgroundColor="White"
+                            Grid.RowSpan="2">
+                
+                <CollectionView.ItemTemplate>
+                    
+                    <DataTemplate>
+                      
+
+                          <Grid Padding="10" Margin="10">    
+                            <Grid.RowDefinitions>    
+                                <RowDefinition Height="Auto" />    
+                                <RowDefinition Height="Auto" />    
+                            </Grid.RowDefinitions>    
+                            <Grid.ColumnDefinitions>    
+                                <ColumnDefinition Width="Auto" />    
+                                <ColumnDefinition Width="Auto" />    
+                                 
+                            </Grid.ColumnDefinitions>    
+                            <Frame Grid.RowSpan="2"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center">
+                               
+                                    <Image
+                                        Margin="-20"
+                                        x:Name="MyImage"
+                                       Source="{Binding thumbnailUrl}" 
+                                       HeightRequest="80"    
+                                       WidthRequest="80" />
+                            </Frame>    
+                            <Label x:Name="Name"
+                                Grid.Column="1"
+                                  
+                                   Text="{Binding name, StringFormat= 'Người đăng: {0}'}"
+                                   FontAttributes="Bold" />    
+                            <Label Margin="0,20,0,0" Grid.Column="1"    
+                                   Text="{Binding title, StringFormat= 'Tiêu đề: {0}'}" 
+                                    FontFamily="Bradley Hand"/>    
+                            <Label Grid.Row="1"    
+                                   Grid.Column="1"    
+                                   Text="{Binding titlealbum, StringFormat= 'Album: {0}'}"    
+                                   VerticalOptions="End" />
+                          
+                      </Grid>
+                    </DataTemplate>    
+                </CollectionView.ItemTemplate>    
+            </CollectionView>    
+
+          <ActivityIndicator x:Name="Progress"
+                               IsEnabled="{Binding IsBusy}" IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}"
+                               Color="Red"
+                               VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+      </Grid>
+
+</ContentPage>
+
