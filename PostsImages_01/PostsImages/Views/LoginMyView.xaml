@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PostsImages.ViewModels"
+    xmlns:behavior="clr-namespace:PostsImages.ViewModels.Behaviors"
+    xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+    x:Class="PostsImages.Views.LoginMyView">
+
+    <Grid RowSpacing="0" ColumnSpacing="0" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+
+        
+        <Image Source="avatar.png" Grid.Column="4" Grid.Row="1" />
+        <Label Text="Login" Grid.Column="4" Grid.Row="2" FontSize="35" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Label x:Name="MesssageError" Text="Nhập UserName ít nhất 8 kí tự và Password ít nhất 8 kí tự phải có số, chữ và kí tự đặc biệt."
+               Grid.Column="2" Grid.Row="9" Grid.ColumnSpan="5" Grid.RowSpan="2"
+               IsVisible="{Binding IsError}"
+               FontSize="15" TextColor="Red" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Image Source="user.png" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" Opacity="0.5"/>
+        <Entry Text="{Binding UserName}"
+               
+               x:Name="UserName"
+               Placeholder="Username"
+               HorizontalOptions="FillAndExpand"
+               Grid.Column="4" Grid.Row="5" FontSize="25"
+               VerticalOptions="Center"
+               Grid.ColumnSpan="4">
+                    <Entry.Behaviors>
+                        <b:EventToCommandBehavior EventName="TextChanged"
+                                          Command="{Binding TextChangedCommand}"
+                                          CommandParameter="Text"/>
+                        
+                        
+                    </Entry.Behaviors>
+            </Entry>
+        <!--Text="{Binding UserName}"-->
+        <Image Source="pass.png" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2" Opacity="0.5"/>
+        <Entry Text="{Binding Password}"
+               x:Name="Password"
+               
+               Placeholder="Password"
+               HorizontalOptions="FillAndExpand"
+               Grid.Column="4" Grid.Row="7" FontSize="25"
+               VerticalOptions="Center"
+               Grid.ColumnSpan="4"
+               IsPassword="True">
+                <Entry.Behaviors>
+                            <b:EventToCommandBehavior EventName="TextChanged"
+                                              Command="{Binding TextChangedCommand}"
+                                              CommandParameter="Text"/>
+                </Entry.Behaviors>
+         </Entry>
+
+        <Button x:Name="Loginbtn" Text="Đăng nhập" Command="{Binding OnLogin}"
+                Grid.Column="3" Grid.Row="9" Grid.ColumnSpan="3" Style="{StaticResource ButtonStyle}"
+                Opacity="1" IsVisible="{Binding IsLogin}"/>
+            <!--ImageSource="loginbtn01.png"-->
+                
+        
+        
+
+        <Label Text="Hoặc đăng nhập bằng:" Grid.Column="3" Grid.Row="11" Grid.ColumnSpan="3"
+               VerticalOptions="End" HorizontalOptions="Center" />
+
+
+        <StackLayout Grid.Column="2" Grid.Row="13" Grid.ColumnSpan="5">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                 <Button  Text="Facebook" FontSize="Small"
+                         Style="{StaticResource ButtonFacebookStyle}"
+                                    Command="{Binding OnLoginFB}"
+                                    Grid.Column="0"
+                                    VerticalOptions="End" HorizontalOptions="End"/>
+                 <Button  Text="Google"
+                         Command="{Binding LoginGoogle}"
+                         Style="{StaticResource ButtonGoogleStyle}"
+                                    Grid.Column="1" 
+                                    VerticalOptions="End" HorizontalOptions="End"/>
+            </Grid>
+           
+        </StackLayout>
+  
+    </Grid>  
+</ContentPage>
+
+
+
+
+  

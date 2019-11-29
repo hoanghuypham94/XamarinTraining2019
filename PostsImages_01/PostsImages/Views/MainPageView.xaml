@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PostsImages.Views.MainPageView">
+   <Grid RowSpacing="0" ColumnSpacing="0" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="0.5*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            
+        </Grid.RowDefinitions>
+       <Frame Margin="10"
+              Grid.Column="6" Grid.Row="1"
+                                   BorderColor="White"
+                                   CornerRadius="50"
+                                   HeightRequest="60"
+                                   WidthRequest="60"
+                                   IsClippedToBounds="True"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center">
+                <Image Source="avatar.png"  HeightRequest="100"    
+                       WidthRequest="100"  Margin="-20"
+                       Aspect="AspectFill" VerticalOptions="Center"
+                       x:Name="image"/>
+       </Frame>
+        <Label Text="{Binding UserName}" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="8"
+               FontSize="30" VerticalOptions="Center" HorizontalOptions="Center"/>
+       
+      
+                <Button Text="+" Grid.Column="6" Grid.Row="1"
+                        FontSize="30"
+                        Clicked="OnPickPhotoButtonClicked"
+                        CornerRadius="20"
+                        HeightRequest="40"
+                        WidthRequest="40"
+                        TextColor="Blue"
+                        BackgroundColor="LightGray"
+                        BorderColor="White"
+                        BorderWidth="2"
+                        VerticalOptions="End" HorizontalOptions="End"/>
+      
+         </Grid>
+</ContentPage>

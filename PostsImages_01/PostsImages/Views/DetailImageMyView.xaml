@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="PostsImages.Views.DetailImageMyView">
+
+   
+
+    <ScrollView>
+       <CollectionView x:Name="CollectionListDetail"
+                       ItemsSource="{Binding collectionListDetail}">
+               
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid x:Name="photoGrid" Padding="1" BackgroundColor="Gray">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="450"/>
+                                    <RowDefinition Height="100"/>
+                                </Grid.RowDefinitions>
+
+                                <BoxView BackgroundColor="White" Grid.Row="0" Grid.RowSpan="2"/>
+
+                                <Image x:Name="image" Margin="10,0"
+                                       Source="{Binding thumbnailUrl}"
+                                       BackgroundColor="#AAAAAA"
+                                       Aspect="AspectFill"/>
+
+                            <StackLayout Grid.Row="1">
+                                <Label x:Name="Title"
+                                       Margin="10,0"
+                                       FontSize="20"
+                                       Text="{Binding title, StringFormat= 'Tiêu đề: {0}'}"
+                                       FontFamily="Bradley Hand"/>
+                                <Label x:Name="Album"
+                                           Margin="10,-5"
+                                           Text="{Binding titlealbum, StringFormat= 'Album: {0}'}"
+                                           FontFamily="Bradley Hand"/>
+                                <Label x:Name="Poster"
+                                           Margin="10,0"
+                                           Text="{Binding name, StringFormat= 'Người đăng: {0}'}"
+                                           FontFamily="Bradley Hand"/>
+                            </StackLayout>
+
+                        </Grid>
+                     </DataTemplate>
+                    </CollectionView.ItemTemplate>
+           </CollectionView>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,78 @@
+﻿<Properties StartupConfiguration="{04FEBD86-1925-4FDD-A591-F4FC25D45F1B}|Default">
+  <MonoDevelop.Ide.ItemProperties.PostsImages.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.F02B72D5-7CBE-4C96-9F32-A63DBD4C1421" />
+  <MonoDevelop.Ide.ItemProperties.PostsImages.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.nexus_4_nougat_7_1_api_25" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="PostsImages/ViewModels/CustomMasterDetailPageViewModel.cs">
+    <Files>
+      <File FileName="PostsImages/Views/ShowImagesPageMyView.xaml" Line="146" Column="77" />
+      <File FileName="PostsImages/ViewModels/ShowImagesPageMyViewModel.cs" />
+      <File FileName="PostsImages/ViewModels/ViewModelBase.cs" />
+      <File FileName="PostsImages/Services/IPhotosApi.cs" />
+      <File FileName="PostsImages/ViewModels/LoginViewModel.cs" />
+      <File FileName="PostsImages/ViewModels/InfoOfUserViewModel.cs" />
+      <File FileName="PostsImages/Controls/ButtonMenuRenderer.cs" />
+      <File FileName="PostsImages/Views/ProviderLoginPage.xaml" />
+      <File FileName="PostsImages/Views/ProviderLoginPage.xaml.cs" />
+      <File FileName="PostsImages/Views/GoogleProfilePage.xaml.cs" />
+      <File FileName="PostsImages/ViewModels/GoogleViewModel.cs" />
+      <File FileName="PostsImages/Views/LoginMyView.xaml" />
+      <File FileName="PostsImages/App.xaml.cs" />
+      <File FileName="PostsImages/Views/FacebookProfilePage.xaml" />
+      <File FileName="PostsImages/Views/FacebookProfilePage.xaml.cs" />
+      <File FileName="PostsImages/Views/FacebookProfileCsPage.cs" />
+      <File FileName="PostsImages/Views/CustomMasterDetailPage.cs" />
+      <File FileName="PostsImages/ViewModels/FacebookViewModel.cs" />
+      <File FileName="PostsImages/Models/FacebookProfile.cs" />
+      <File FileName="PostsImages/Services/FacebookServices.cs" />
+      <File FileName="PostsImages/Models/GoogleProfile.cs" />
+      <File FileName="PostsImages/Views/InfoOfUserMyView.xaml.cs" />
+      <File FileName="PostsImages/ViewModels/CustomMasterDetailPageViewModel.cs" Line="76" Column="14" />
+      <File FileName="PostsImages.iOS/Main.cs" />
+      <File FileName="PostsImages/Views/InfoOfUserMyView.xaml" />
+      <File FileName="PostsImages/Views/CustomMasterDetailPage.xaml" />
+      <File FileName="PostsImages.iOS/ButtonMenuRendererIOS.cs" />
+      <File FileName="PostsImages/Views/MainPageView.xaml" />
+      <File FileName="PostsImages/Views/MainPageView.xaml.cs" />
+      <File FileName="PostsImages/Views/LoginMyView.xaml.cs" />
+      <File FileName="PostsImages/ViewModels/MainPageViewModel.cs" />
+      <File FileName="PostsImages/Models/UserModel.cs" />
+      <File FileName="PostsImages/UserInfo.cs" />
+      <File FileName="PostsImages/Models/InfoUser.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PostsImages" expanded="True">
+            <Node name="PostsImages" expanded="True">
+              <Node name="Controls" expanded="True" />
+              <Node name="Effects" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Themes" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="CustomMasterDetailPageViewModel.cs" selected="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="FacebookProfilePage.xaml" expanded="True" />
+                <Node name="GoogleProfilePage.xaml" expanded="True" />
+                <Node name="InfoOfUserMyView.xaml" expanded="True" />
+                <Node name="LoginMyView.xaml" expanded="True" />
+                <Node name="MainPageView.xaml" expanded="True" />
+                <Node name="ProviderLoginPage.xaml" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="PostsImages.Android" expanded="True">
+              <Node name="Properties" expanded="True" />
+            </Node>
+            <Node name="PostsImages.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

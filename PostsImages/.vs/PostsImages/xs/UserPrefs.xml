@@ -1,22 +1,17 @@
 ﻿<Properties StartupConfiguration="{04FEBD86-1925-4FDD-A591-F4FC25D45F1B}|Default">
   <MonoDevelop.Ide.ItemProperties.PostsImages.iOS automaticSigning="False" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.037A7DB0-8C39-4F19-8C98-E7BB8970888F" />
   <MonoDevelop.Ide.ItemProperties.PostsImages.Android AndroidDesignerPreferredTheme="Theme.AppCompat.Light.NoActionBar" PreferredExecutionTarget="Android.pixel_2_pie_9_0_api_28" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/13.6.0.12/lib/msbuild/iOS/Xamarin.iOS.Common.targets">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PostsImages/obj/Debug/netstandard2.0/Views/ShowImagesPageMyView.xaml.g.cs">
     <Files>
       <File FileName="PostsImages/obj/Debug/netstandard2.0/Views/ShowImagesPageMyView.xaml.g.cs" Line="33" Column="1" />
-      <File FileName="PostsImages/Views/ShowImagesPageMyView.xaml" Line="62" Column="40" />
-      <File FileName="../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/iOS/Xamarin.iOS.Common.targets" Line="693" Column="3" />
+      <File FileName="PostsImages/Views/ShowImagesPageMyView.xaml" />
+      <File FileName="../../../../Library/Frameworks/Mono.framework/External/xbuild/Xamarin/iOS/Xamarin.iOS.Common.targets" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="PostsImages" expanded="True">
-            <Node name="PostsImages" expanded="True">
-              <Node name="ViewModels" expanded="True" />
-              <Node name="Views" expanded="True">
-                <Node name="ShowImagesPageMyView.xaml" expanded="True" selected="True" />
-              </Node>
-            </Node>
+            <Node name="PostsImages" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -26,6 +21,10 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>PostsImages/PostsImages.csproj</String>
+    <String>PostsImages.iOS/PostsImages.iOS.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

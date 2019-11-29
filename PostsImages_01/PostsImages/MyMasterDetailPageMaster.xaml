@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:b="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+    x:Class="PostsImages.MyMasterDetailPageMaster"
+    Title="Menu" >
+
+    <!--<NavigationPage.TitleView>
+        <Image     Source="avatar.png"
+                   WidthRequest="15"
+                   HeightRequest="15"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Start" >
+        </Image>
+       
+    </NavigationPage.TitleView>-->
+
+    <StackLayout>
+        <ListView
+            x:Name="MenuItemsListView"
+            
+            SeparatorVisibility="None"
+            HasUnevenRows="true"
+            ItemsSource="{Binding MenuItems}">
+            <!--<ListView.Behaviors>
+            <b:EventToCommandBehavior EventName="MenuItemList" 
+                                      Command="{Binding MenuItemCommand}"
+                                      CommandParameter="MyParameter"
+                                      />
+            </ListView.Behaviors>-->
+            <ListView.Header>
+                <Grid
+                    BackgroundColor="Gray">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="*" />
+                        <ColumnDefinition
+                            Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="10" />
+                        <RowDefinition
+                            Height="80" />
+                        <RowDefinition
+                            Height="Auto" />
+                        <RowDefinition
+                            Height="10" />
+                    </Grid.RowDefinitions>
+
+                     <Image Source="avatar.png"
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Grid.ColumnSpan="3"/>
+                    <Label Text="{Binding UserName}"
+                           Grid.Column="2"
+                           Grid.ColumnSpan="3"
+                           Grid.Row="1" FontSize="40"
+                           TextColor="White"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"/>
+        
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Text="Menu"
+                        FontSize="15"
+                        TextColor="White"
+                        Style="{DynamicResource SubtitleStyle}" />
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                            Padding="15,10"
+                            HorizontalOptions="FillAndExpand">
+                            <Label
+                                VerticalOptions="FillAndExpand"
+                                VerticalTextAlignment="Center"
+                                Text="{Binding Title}"
+                                FontSize="24" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid>
+            <Button Text="Đăng xuất"  Command="{Binding LoguotCommand}" FontSize="25"/>
+        </Grid>
+    </StackLayout>
+    
+</ContentPage>
