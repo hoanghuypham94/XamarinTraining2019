@@ -34,7 +34,6 @@ variables:
   buildConfiguration: 'Release'
   outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
 
-steps:
   inputs:
     restoreSolution: '**/*.sln'
 
