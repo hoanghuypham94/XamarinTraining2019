@@ -34,9 +34,6 @@ variables:
   buildConfiguration: 'Release'
   outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
 
-  inputs:
-    restoreSolution: '**/*.sln'
-
 - task: XamarinAndroid@1
   inputs:
     projectFile: '**/*Droid*.csproj'
